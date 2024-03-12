@@ -4,24 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragmentCommunication.ChildFragment">
-    <TextView
-        android:layout_width="match_parent"
-        android:id="@+id/recieve"
-        android:textSize="30dp"
-        android:layout_height="wrap_content"></TextView>
+    tools:context=".fragments.f1">
 
     <EditText
-        android:id="@+id/editTextText10"
+        android:id="@+id/editTextText5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Name" />
+        android:hint="Enter User name" />
 
-    <Button
-        android:id="@+id/button17"
+    <EditText
+        android:id="@+id/editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Button" />
+
 </LinearLayout>

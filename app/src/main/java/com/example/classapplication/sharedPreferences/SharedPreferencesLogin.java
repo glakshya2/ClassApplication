@@ -23,15 +23,15 @@ public class SharedPreferencesLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_shared_preferences);
+        setContentView(R.layout.activity_shared_preferences_login);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        SharedPreferences sharedPreferences = getApplication().getSharedPreferences("mypref", 0);
-        if (sharedPreferences.getBoolean("loggedin", false)) {
+        SharedPreferences sharedPreferences = getApplication().getSharedPreferences("my-pref", 0);
+        if (sharedPreferences.getBoolean("isLoggedIn", false)) {
             Intent i = new Intent(getApplicationContext(), SharedPreferencesHome.class);
             startActivity(i);
         }
@@ -45,11 +45,10 @@ public class SharedPreferencesLogin extends AppCompatActivity {
             public void onClick(View v) {
                 if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putBoolean("loggedin", true);
-                    editor.commit();
+                    editor.putBoolean("isLoggedIn", true);
+                    editor.apply();
                     Intent i = new Intent(getApplicationContext(), SharedPreferencesHome.class);
                     startActivity(i);
-
                 }
             }
         });

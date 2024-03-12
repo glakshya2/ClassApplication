@@ -13,6 +13,24 @@
         android:theme="@style/Theme.ClassApplication"
         tools:targetApi="31">
         <activity
+            android:name=".fragmentCommunication.HostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.ParentforFragment"
+            android:exported="false" />
+        <activity
+            android:name=".database.Database"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".database.DatabaseHelper"
+            android:exported="false" />
+        <activity
             android:name=".sharedPreferences.SharedPreferencesHome"
             android:exported="false" />
         <activity
@@ -24,18 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".fragmentCommunication.FragmentCommunication"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".fragments.Fragments"
-            android:exported="false" />
         <activity
             android:name=".days.Days"
             android:exported="true">
