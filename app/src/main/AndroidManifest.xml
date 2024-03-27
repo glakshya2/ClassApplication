@@ -13,6 +13,24 @@
         android:theme="@style/Theme.ClassApplication"
         tools:targetApi="31">
         <activity
+            android:name=".recycler.RecycleViewActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".recycler.AddEditrecyclerItem"
+            android:exported="false" />
+        <activity
+            android:name=".authentication.SignIn"
+            android:exported="false" />
+        <activity
+            android:name=".authentication.Registration"
+            android:exported="false" />
+        <activity
             android:name=".fragmentCommunication.HostActivity"
             android:exported="false" />
         <activity
