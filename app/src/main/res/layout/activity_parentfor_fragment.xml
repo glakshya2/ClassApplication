@@ -37,13 +37,14 @@
                 android:onClick="change"
                 android:text="Button" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_weight="30"
             android:id="@+id/l22"
-            android:onClick="change"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:onClick="change"
+            android:orientation="vertical">
 
         </LinearLayout>
     </LinearLayout>

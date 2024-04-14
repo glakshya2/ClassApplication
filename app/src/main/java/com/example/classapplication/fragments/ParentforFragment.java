@@ -25,6 +25,5 @@ public class ParentforFragment extends AppCompatActivity {
             ft.replace(R.id.l22,new f2());
         }
         ft.commit();
-
     }
 }

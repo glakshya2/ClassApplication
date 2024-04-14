@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".shapesAndAudio.ShapesAndAudio">
+
+    <com.example.classapplication.shapesAndAudio.MyDrawing
+        android:id="@+id/myDrawing"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/circleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.example.classapplication.shapesAndAudio.MyDrawing>
+
+    <Button
+        android:id="@+id/circleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Circle"
+        app:layout_constraintBaseline_toBaselineOf="@+id/rectangleButton"
+        app:layout_constraintStart_toStartOf="@+id/myDrawing" />
+
+    <Button
+        android:id="@+id/ovalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Oval"
+        app:layout_constraintEnd_toEndOf="@+id/myDrawing"
+        app:layout_constraintTop_toBottomOf="@+id/myDrawing" />
+
+    <Button
+        android:id="@+id/rectangleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:text="Rectangle"
+        app:layout_constraintStart_toEndOf="@+id/circleButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/triangleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Trianghle"
+        app:layout_constraintEnd_toStartOf="@+id/ovalButton"
+        app:layout_constraintTop_toBottomOf="@+id/myDrawing" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

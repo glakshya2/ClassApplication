@@ -27,14 +27,20 @@ public class RecycleViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle_view);
-        personList = new ArrayList<Person>();
+        personList = RecyclerHelper.personList;
         addButton = findViewById(R.id.addDataCard);
         recyclerView = findViewById(R.id.recyclerView);
-        adapter = new MyAdapter(RecycleViewActivity.this, personList);
+        adapter = new MyAdapter(RecycleViewActivity.this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         fillRecyclerView();
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), AddEditrecyclerItem.class));
+            }
+        });
     }
 
     private void fillRecyclerView() {
@@ -44,8 +50,8 @@ public class RecycleViewActivity extends AppCompatActivity {
         personList.add(new Person("VIT3", "vit3@vit.ac.in", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBmhiayzUj7t9rq8b1nL1S0eSDUHYeK1d6kPvb3OFtsQ&s", 20));
         personList.add(new Person("VIT4", "vit4@vit.ac.in", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBmhiayzUj7t9rq8b1nL1S0eSDUHYeK1d6kPvb3OFtsQ&s", 20));
         personList.add(new Person("VIT5", "vit5@vit.ac.in", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBmhiayzUj7t9rq8b1nL1S0eSDUHYeK1d6kPvb3OFtsQ&s", 20));
-
+        personList.add(new Person("VIT6", "CBDHSJBHSD", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBmhiayzUj7t9rq8b1nL1S0eSDUHYeK1d6kPvb3OFtsQ&s", 20));
+        personList.remove(0);
     }
-
 
 }
